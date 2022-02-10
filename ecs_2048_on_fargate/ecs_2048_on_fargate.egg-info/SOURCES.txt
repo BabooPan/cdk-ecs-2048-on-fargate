@@ -1,0 +1,7 @@
+README.md
+setup.py
+ecs_2048_on_fargate/ecs_2048_on_fargate.egg-info/PKG-INFO
+ecs_2048_on_fargate/ecs_2048_on_fargate.egg-info/SOURCES.txt
+ecs_2048_on_fargate/ecs_2048_on_fargate.egg-info/dependency_links.txt
+ecs_2048_on_fargate/ecs_2048_on_fargate.egg-info/requires.txt
+ecs_2048_on_fargate/ecs_2048_on_fargate.egg-info/top_level.txt
