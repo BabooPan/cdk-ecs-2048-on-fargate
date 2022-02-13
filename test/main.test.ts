@@ -1,11 +1,19 @@
-import { App } from 'aws-cdk-lib';
-import { Template } from 'aws-cdk-lib/assertions';
-import { MyStack } from '../src/main';
+import * as assertions from 'aws-cdk-lib/assertions';
+import { App, Stack } from 'aws-cdk-lib/core';
+import { CdkEcs2048FargateDemo } from '../src/main';
 
-test('Snapshot', () => {
+test('test create ECS cluster', () => {
   const app = new App();
-  const stack = new MyStack(app, 'test');
+  const stack = new Stack(app, 'test-stack');
 
-  const template = Template.fromStack(stack);
-  expect(template.toJSON()).toMatchSnapshot();
+  new CdkEcs2048FargateDemo(stack, 'ecs-cluster');
+  assertions.Template.fromStack(stack).findResources('AWS::ECS::Cluster');
+});
+
+test('test create ECS service', () => {
+  const app = new App();
+  const stack = new Stack(app, 'test-stack');
+
+  new CdkEcs2048FargateDemo(stack, 'ecs-service');
+  assertions.Template.fromStack(stack).findResources('AWS::ECS::Service');
 });
