@@ -1,7 +1,10 @@
 import { App, Stack, StackProps } from 'aws-cdk-lib';
+import *  as ec2 from 'aws-cdk-lib/aws-ec2';
+import *  as ecs from 'aws-cdk-lib/aws-ecs';
+import *  as elbv2 from 'aws-cdk-lib/aws-elasticloadbalancingv2';
 import { Construct } from 'constructs';
 
-export class MyStack extends Stack {
+export class CdkEcs2048FargateDemo extends Stack {
   constructor(scope: Construct, id: string, props: StackProps = {}) {
     super(scope, id, props);
 
@@ -17,7 +20,6 @@ const devEnv = {
 
 const app = new App();
 
-new MyStack(app, 'my-stack-dev', { env: devEnv });
-// new MyStack(app, 'my-stack-prod', { env: prodEnv });
+new CdkEcs2048FargateDemo(app, 'cdk-ecs-2048-on-fargate', { env: devEnv });
 
 app.synth();
