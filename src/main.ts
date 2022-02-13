@@ -1,4 +1,4 @@
-import { App, Stack, StackProps, CfnOutput, Duration } from 'aws-cdk-lib';
+import { App, Stack, StackProps, Duration } from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as ecs from 'aws-cdk-lib/aws-ecs';
 import * as ecsPatterns from 'aws-cdk-lib/aws-ecs-patterns';
@@ -38,10 +38,6 @@ export class CdkEcs2048FargateDemo extends Stack {
     scaleTarget.scaleOnCpuUtilization('CpuScaling', {
       targetUtilizationPercent: 50,
       scaleInCooldown: Duration.seconds(60),
-    });
-
-    new CfnOutput(this, 'alb-endpoint', {
-      value: ecsService2048.loadBalancer.loadBalancerDnsName,
     });
   }
 }
