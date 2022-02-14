@@ -4,6 +4,7 @@
 !/.projen/deps.json
 !/.projen/files.json
 !/.github/workflows/pull-request-lint.yml
+!/.github/workflows/auto-approve.yml
 !/.github/workflows/stale.yml
 !/package.json
 !/LICENSE
@@ -20,7 +21,6 @@ pids
 *.seed
 *.pid.lock
 lib-cov
-coverage
 *.lcov
 .nyc_output
 build/Release
@@ -31,14 +31,17 @@ jspm_packages/
 *.tgz
 .yarn-integrity
 .cache
+.dccache
+cdk.out
+cdk.context.json
+yarn-error.log
+coverage
+venv
 !/.projenrc.js
 /test-reports/
 junit.xml
 /coverage/
 !/.github/workflows/build.yml
-/dist/changelog.md
-/dist/version.txt
-!/.github/workflows/release.yml
 !/.mergify.yml
 !/.github/pull_request_template.md
 !/test/
@@ -50,4 +53,4 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
-!/.github/workflows/upgrade-main.yml
+!/.github/workflows/upgrade.yml

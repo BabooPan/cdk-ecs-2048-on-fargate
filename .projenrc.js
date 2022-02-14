@@ -16,7 +16,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   stability: 'experimental',
   autoDetectBin: false,
   dependabot: false,
-  cdkVersion: '2.10.0',
+  cdkVersion: '2.12.0',
   majorVersion: 2,
   depsUpgradeOptions: {
     ignoreProjen: false,
