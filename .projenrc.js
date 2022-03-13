@@ -26,7 +26,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
   autoApproveOptions: {
     // deepcode ignore HardcodedNonCryptoSecret: Allow to preform GitHub Actions
-    secret: 'PROJEN_GITHUB_TOKEN',
+    secret: 'GITHUB_TOKEN',
     allowedUsernames: ['baboopan'],
   },
   gitignore: [
