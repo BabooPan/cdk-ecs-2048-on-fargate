@@ -99,6 +99,15 @@ Duplicate values are removed when stack is synthesized.
 
 > [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-section-structure.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-section-structure.html)
 
+###### Example <a name="Example" id="cdk-ecs-2048-on-fargate.CdkEcs2048FargateDemo.addTransform.example"></a>
+
+```typescript
+declare const stack: Stack;
+
+stack.addTransform('AWS::Serverless-2016-10-31')
+```
+
+
 ###### `transform`<sup>Required</sup> <a name="transform" id="cdk-ecs-2048-on-fargate.CdkEcs2048FargateDemo.addTransform.parameter.transform"></a>
 
 - *Type:* string
@@ -517,6 +526,14 @@ public readonly stackId: string;
 The ID of the stack.
 
 ---
+
+###### Example <a name="Example" id="cdk-ecs-2048-on-fargate.CdkEcs2048FargateDemo.property.stackId.example"></a>
+
+```typescript
+// After resolving, looks like
+'arn:aws:cloudformation:us-west-2:123456789012:stack/teststack/51af3dc0-da77-11e4-872e-1234567db123'
+```
+
 
 ##### `stackName`<sup>Required</sup> <a name="stackName" id="cdk-ecs-2048-on-fargate.CdkEcs2048FargateDemo.property.stackName"></a>
 
