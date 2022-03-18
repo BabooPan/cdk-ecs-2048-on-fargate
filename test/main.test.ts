@@ -1,6 +1,6 @@
 import * as assertions from 'aws-cdk-lib/assertions';
 import { App, Stack } from 'aws-cdk-lib/core';
-import { CdkEcs2048FargateDemo } from '../src/index';
+import { CdkEcs2048FargateDemo } from '../src/main';
 
 test('test create ECS cluster', () => {
   const app = new App();

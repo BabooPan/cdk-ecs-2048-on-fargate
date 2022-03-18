@@ -4,19 +4,19 @@ const PROJECT_NAME = 'cdk-ecs-2048-on-fargate';
 const PROJECT_DESCRIPTION =
   'Container Application for Demo, deploy as ECS Cluster and Services.';
 
-const project = new awscdk.AwsCdkConstructLibrary({
+const project = new awscdk.AwsCdkTypeScriptApp({
   name: PROJECT_NAME,
   description: PROJECT_DESCRIPTION,
-  repository: 'https://github.com/baboopan/cdk-stepfunction-demo.git',
+  repository: 'https://github.com/baboopan/cdk-ecs-2048-on-fargate.git',
   authorName: 'Baboo Pan',
   authorEmail: 'lpig0818@gmail.com',
-  keywords: ['aws', 'stepfunction'],
+  keywords: ['aws', 'ecs', 'fargate', 'cdk'],
   defaultReleaseBranch: 'main',
   release: false,
   stability: 'experimental',
   autoDetectBin: false,
   dependabot: false,
-  cdkVersion: '2.12.0',
+  cdkVersion: '2.17.0',
   majorVersion: 2,
   depsUpgradeOptions: {
     ignoreProjen: false,
